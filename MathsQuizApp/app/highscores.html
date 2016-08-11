@@ -1,0 +1,14 @@
+﻿<div class="container">
+
+    <div style="display: inline-block;">
+        <h2>High Scores</h2>
+        <table>
+            <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date']">
+                <td>{{ item.score }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.date | date:'medium' }}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>

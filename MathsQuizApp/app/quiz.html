@@ -1,0 +1,25 @@
+﻿<div class="container">
+
+    <div class="panel" >
+
+        <h3 class="panel-title">
+            Question {{ vm.currentQuestion.questionNo }}
+        </h3>
+
+        <div class="question-body">
+            <p>&nbsp;&nbsp;{{ vm.currentQuestion.operand1}}</p>
+            <p>{{ vm.currentQuestion.operator}} {{ vm.currentQuestion.operand2 }}</p>
+            <hr style="width:130px;" />
+            <form name="myForm" class="question-response">
+                <input name="inputAnswer" type="number" ng-model="vm.currentQuestion.response" ng-readonly="vm.currentQuestion.result" placeholder="Answer " style="text-align:right; width:95px;" required>
+                <button id="btnSubmit" type="submit"  style="width:60px;" ng-disabled="(!myForm.inputAnswer.$valid) || vm.currentQuestion.result" ng-click="vm.submitAnswer()">Done</button>
+            </form>
+        </div>
+
+        <div class="question-footer" ng-class="{'red': (vm.currentQuestion.result === 0), 'green': (vm.currentQuestion.result === 1)}">
+            <span class="fa" ng-class="{'fa-close': (vm.currentQuestion.result === 0), 'fa-check': (vm.currentQuestion.result === 1)}" ></span>
+            <span style="text-align:center;">{{ vm.currentQuestion.message }}</span>
+        </div>
+
+    </div>
+</div>

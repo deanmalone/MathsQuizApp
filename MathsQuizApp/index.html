@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Maths Quiz App</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/app.css" />
+</head>
+<body ng-controller="AppController as vm">
+
+    <header>
+        <a ui-sref="main"><img src="images/mathsquiz.png" style="display: block; min-width:200px; margin: auto" /></a>
+    </header>
+
+    <div ui-view class="content"></div>
+
+    <footer></footer>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="app/app.module.js"></script>
+    <script src="app/app.config.js"></script>
+    <script src="app/app.controller.js"></script>
+    <script src="app/main.controller.js"></script>
+    <script src="app/quiz.controller.js"></script>
+    <script src="app/highscores.controller.js"></script>
+    <script src="app/data.service.js"></script>
+
+</body>
+</html>
