@@ -1,18 +1,20 @@
 ﻿<div class="container">
 
-    <div class="panel" >
+    <div class="question" >
 
-        <h3 class="panel-title">
+        <div class="question-header">
             Question {{ vm.currentQuestion.questionNo }}
-        </h3>
+        </div>
 
         <div class="question-body">
-            <p>&nbsp;&nbsp;{{ vm.currentQuestion.operand1}}</p>
-            <p>{{ vm.currentQuestion.operator}} {{ vm.currentQuestion.operand2 }}</p>
-            <hr style="width:130px;" />
-            <form name="myForm" class="question-response">
-                <input name="inputAnswer" type="number" ng-model="vm.currentQuestion.response" ng-readonly="vm.currentQuestion.result" placeholder="Answer " style="text-align:right; width:95px;" required>
-                <button id="btnSubmit" type="submit"  style="width:60px;" ng-disabled="(!myForm.inputAnswer.$valid) || vm.currentQuestion.result" ng-click="vm.submitAnswer()">Done</button>
+            <div class="question-question">
+                <div>{{ vm.currentQuestion.operand1}}</div>
+                <div>{{ vm.currentQuestion.operator}} {{ vm.currentQuestion.operand2 }}</div>
+            </div>
+            <hr style="width:165px;" />
+            <form name="responseform" class="question-response">
+                <input name="inputAnswer" type="number" ng-model="vm.currentQuestion.response" ng-readonly="vm.currentQuestion.result" required>
+                <button id="btnSubmit" type="submit" ng-disabled="(!responseform.inputAnswer.$valid) || vm.currentQuestion.result" ng-click="vm.submitAnswer()">Done</button>
             </form>
         </div>
 

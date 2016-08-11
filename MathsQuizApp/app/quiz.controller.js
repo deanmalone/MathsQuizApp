@@ -5,9 +5,9 @@
         .module('app')
         .controller('QuizController', QuizController);
 
-    QuizController.$inject = ['DataService', '$timeout'];
+    QuizController.$inject = ['DataService', '$timeout', '$state'];
 
-    function QuizController(DataService, $timeout) {
+    function QuizController(DataService, $timeout, $state) {
         var vm = this;
 
         var questions = DataService.getQuestions();
@@ -20,6 +20,7 @@
 
             if (questionIndex >= questions.length - 1) {
                 vm.quizFinished = true;
+                $state.go('highscores');
             }
             else {
                 questionIndex++;
