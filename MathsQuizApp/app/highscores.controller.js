@@ -5,12 +5,12 @@
         .module('app')
         .controller('HighScoresController', HighScoresController);
 
-    HighScoresController.$inject = ['DataService', '$timeout'];
+    HighScoresController.$inject = ['QuizService', '$timeout'];
 
-    function HighScoresController(DataService, $timeout) {
+    function HighScoresController(QuizService, $timeout) {
         var vm = this;
 
-        vm.highScores = DataService.getHighScores();
+        vm.highScores = QuizService.getHighScores();
 
     }
 

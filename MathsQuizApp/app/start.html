@@ -1,0 +1,28 @@
+﻿<div class="container">
+
+    <div class="panel">
+
+        <div class="panel-header">
+            <span>Let's begin...</span>
+            <span class="score">{{ vm.score }}</span>
+        </div>
+
+        <div class="panel-body">
+            <form id="startquizform">
+                <div>
+                    <p />
+                    <label for="name">Your name:</label>
+                    <input type="text" name="name" ng-model="vm.username" placeholder="?" required>
+                </div>
+                <button id="btnOK" type="submit" class="btn" ng-click="vm.startQuiz()">Start</button>
+            </form>
+        </div>
+
+        <div class="panel-footer">
+            <span class="fa"></span>
+            <span>{{ vm.message }}</span>
+        </div>
+
+    </div>
+
+</div>

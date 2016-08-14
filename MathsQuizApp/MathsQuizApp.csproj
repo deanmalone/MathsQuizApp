@@ -48,6 +48,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,6 +69,10 @@
   <ItemGroup>
     <Content Include="app\highscores.controller.js" />
     <Content Include="app\highscores.html" />
+    <Content Include="app\results.controller.js" />
+    <Content Include="app\results.html" />
+    <Content Include="app\start.controller.js" />
+    <Content Include="app\start.html" />
     <Content Include="css\app.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
@@ -96,7 +101,7 @@
     <Content Include="app\app.config.js" />
     <Content Include="app\app.controller.js" />
     <Content Include="app\app.module.js" />
-    <Content Include="app\data.service.js" />
+    <Content Include="app\quiz.service.js" />
     <Content Include="app\main.controller.js" />
     <Content Include="app\main.html" />
     <Content Include="app\quiz.controller.js" />
@@ -118,6 +123,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Api\" />
     <Folder Include="Server\" />
   </ItemGroup>
   <PropertyGroup>

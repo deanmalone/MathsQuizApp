@@ -5,9 +5,9 @@
         .module('app')
         .controller('MainController', MainController);
 
-    MainController.$inject = ['DataService'];
+    MainController.$inject = ['QuizService'];
 
-    function MainController(DataService) {
+    function MainController(QuizService) {
         var vm = this;
 
 

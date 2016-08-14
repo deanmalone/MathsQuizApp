@@ -11,12 +11,14 @@
 <body ng-controller="AppController as vm">
 
     <header>
-        <a ui-sref="main"><img src="images/mathsquiz.png" style="display: block; min-width:200px; margin: auto" /></a>
+        <a ui-sref="main"><img style="display:block;margin-left:auto;margin-right:auto;" src="images/mathsquiz.png" /></a>
     </header>
 
     <div ui-view class="content"></div>
 
-    <footer></footer>
+    <footer>
+        <a href="#"><span class="fa fa-info-circle fa-2x" style="margin:10px;"></span></a>
+    </footer>
 
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-ui-router.min.js"></script>
@@ -24,9 +26,11 @@
     <script src="app/app.config.js"></script>
     <script src="app/app.controller.js"></script>
     <script src="app/main.controller.js"></script>
+    <script src="app/start.controller.js"></script>
     <script src="app/quiz.controller.js"></script>
+    <script src="app/results.controller.js"></script>
     <script src="app/highscores.controller.js"></script>
-    <script src="app/data.service.js"></script>
+    <script src="app/quiz.service.js"></script>
 
 </body>
 </html>

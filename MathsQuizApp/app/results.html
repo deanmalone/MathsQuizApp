@@ -1,0 +1,31 @@
+﻿<div class="container">
+
+    <div style="display: inline-block;">
+        <h2>Quiz Results</h2>
+        <table>
+            <tr>
+                <th colspan="2" style="text-align:left">Question</th>
+                <th>Response</th>
+                <th>Answer</th>
+                <th>Result</th>
+            </tr>
+            <tr ng-repeat="item in vm.questions | orderBy : 'questionNo'">
+                <td>{{ item.questionNo }}.</td>
+                <td style="text-align:right">{{ item.operand1 }} {{ item.operator }} {{ item.operand2 }} = </td>
+                <td>{{ item.response}}</td>
+                <td>{{ item.answer}}</td>
+                <td><span class="fa" ng-class="{'fa-close': (item.result === 0), 'fa-check': (item.result === 1)}"></span></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:right">Score</td>
+                <td>{{ vm.score }}</td>
+            </tr>
+        </table>
+
+        <div>
+            <button id="btnOK" class="btn" ui-sref="highscores">OK</button>
+        </div>
+
+    </div>
+
+</div>
