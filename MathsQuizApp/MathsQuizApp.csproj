@@ -77,6 +77,7 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\GoodDog-webfont.svg" />
     <Content Include="images\highscores.png" />
     <Content Include="images\mathsquiz.png" />
     <Content Include="images\startquiz.png" />
@@ -89,6 +90,9 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\GoodDog-webfont.eot" />
+    <Content Include="fonts\GoodDog-webfont.ttf" />
+    <Content Include="fonts\GoodDog-webfont.woff" />
     <None Include="Properties\PublishProfiles\MathsQuizApp.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

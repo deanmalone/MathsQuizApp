@@ -1,14 +1,25 @@
-﻿html, body {
+﻿@font-face {
+    font-family: 'gooddogregular';
+    src: url('../fonts/GoodDog-webfont.eot');
+    src: url('../fonts/GoodDog-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/GoodDog-webfont.woff') format('woff'),
+         url('../fonts/GoodDog-webfont.ttf') format('truetype'),
+         url('../fonts/GoodDog-webfont.svg#gooddogregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
     height: 100%;
     padding:0;
     margin:0;
 }
 
 body {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-family: 'gooddogregular';
     background-image: radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
     background-image: -webkit-radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
-    position:relative;
+    position: relative;
 }
 
 header {
@@ -20,6 +31,13 @@ footer {
 	position:absolute;
 	bottom:0;
 	left:0;
+}
+
+input, label {
+    font-family: 'gooddogregular';
+    font-size: 30px;
+    width:100px;
+    margin:10px;
 }
 
 hr {
@@ -40,6 +58,14 @@ table tr:nth-child(even) {
   background-color: #ffffff;
 }
 
+.content {
+  width:100%;  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .container {
   margin: 0 auto;
   padding: 10px;
@@ -48,7 +74,8 @@ table tr:nth-child(even) {
 
 .menu-item {
   padding: 15px;
-  max-width: 250px;
+  /*max-width: 250px;*/
+  width: 220px;
   margin: 10px;
   display: inline-block;
   border-radius: 20px;
@@ -80,7 +107,7 @@ table tr:nth-child(even) {
 .panel-header {
     color: #EBEBD3;
     margin:0px 10px 10px 10px;
-    font-size:24px;
+    font-size: 30px;
     text-align: left;
 }
 
@@ -93,7 +120,7 @@ table tr:nth-child(even) {
    color:black;
    background-color: #EBEBD3;
    padding: 10px 0 15px 0;
-   font-size: 20px;
+   font-size: 26px;
 }
 
 .question-text {
@@ -103,7 +130,7 @@ table tr:nth-child(even) {
 }
 
 .score {
-    font-family: "Courier New", Courier, monospace;
+    /*font-family: "Courier New", Courier, monospace;*/
     font-size: 30px;
     font-weight: bold;
     float:right;
@@ -122,7 +149,8 @@ table tr:nth-child(even) {
     color: #EBEBD3;
     width: 80px;
     padding: 10px;
-    font-size: 20px;
+    font-family: 'gooddogregular';
+    font-size: 30px;
     border-radius: 20px;
     border:none;
     cursor: pointer;
