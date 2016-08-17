@@ -1,19 +1,18 @@
 ﻿<div class="container">
 
-    <div style="display: inline-block;">
-        <h2>High Scores</h2>
-        <table>
-            <tr>
-                <th>Score</th>
-                <th>Name</th>
-                <th>Date</th>
-            </tr>
-            <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:10">
-                <td>{{ item.score }}</td>
-                <td>{{ item.name }}</td>
-                <td>{{ item.date | date:'medium' }}</td>
-            </tr>
-        </table>
-    </div>
+    <h2>High Scores</h2>
+    <table align="center">
+        <tr>
+            <th>Score</th>
+            <th>Name</th>
+            <th>Date</th>
+        </tr>
+        <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:10">
+            <td>{{ item.score }}</td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.date | date:'medium' }}</td>
+        </tr>
+    </table>
+    <button id="btnOK" class="btn" ui-sref="main">OK</button>
 
 </div>

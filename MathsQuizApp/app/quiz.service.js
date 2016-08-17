@@ -30,6 +30,7 @@
             return Math.floor(Math.random() * (max - min + 1)) + min;
         }
 
+        service.quizRunning = false;
         service.currentUser = null;
         service.questions = null;
         service.score = 0;
@@ -40,6 +41,7 @@
             // initialise quiz;
             service.score = 0;
             service.questions = null;
+            service.quizRunning = true;
 
             service.questions = new Array(options.numberOfQuestions);
             for (var i = 0; i < options.numberOfQuestions; i++) {
@@ -69,7 +71,7 @@
             // always store the score (for now)
             var newScore = { score: score, name: service.currentUser, date: new Date() };
             scores.push(newScore);
-
+            service.quizRunning = false;
         }
 
     };

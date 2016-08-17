@@ -13,21 +13,22 @@ html, body {
     height: 100%;
     padding:0;
     margin:0;
+    border:0;
 }
 
 body {
     font-family: 'gooddogregular';
+    font-size: 20px;
     background-image: radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
     background-image: -webkit-radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
     position: relative;
 }
 
 header {
-
+    text-align:center;
 }
 
 footer {
-	width:100%;
 	position:absolute;
 	bottom:0;
 	left:0;
@@ -41,53 +42,45 @@ input, label {
 }
 
 hr {
-  border: 0;
-  border-top: 1px solid #8c8c8c;
-  border-bottom: 1px solid #fff;
+    border: 0;
+    border-top: 1px solid #8c8c8c;
+    border-bottom: 1px solid #fff;
 }
 
 table, th , td  {
-  border: 1px solid grey;
-  border-collapse: collapse;
-  padding: 5px;
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
 }
 table tr:nth-child(odd) {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 }
 table tr:nth-child(even) {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .content {
-  width:100%;  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width:100%; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .container {
-  margin: 0 auto;
-  padding: 10px;
-  text-align: center;
+    text-align: center;
 }
 
 .menu-item {
-  padding: 15px;
-  /*max-width: 250px;*/
-  width: 220px;
-  margin: 10px;
-  display: inline-block;
-  border-radius: 20px;
+    display: inline-block;
+    padding: 15px;
+    width: 220px;
+    margin: 10px;
+    border-radius: 20px;
 }
 
 .menu-item:hover {
     background-color: #1446A0;
-}
-
-.quizstart {
-    padding: 10px;
-    margin: 10px;
 }
 
 .panel {
@@ -95,7 +88,6 @@ table tr:nth-child(even) {
 	padding: 10px;
 	margin: 20px auto;
     background-color: #1446A0;
-	border: 1px solid #1446A0;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
@@ -114,13 +106,14 @@ table tr:nth-child(even) {
 .panel-body {
     background-color: #EBEBD3;
     padding:10px;
+    margin:0;
 }
 
 .panel-footer {
-   color:black;
-   background-color: #EBEBD3;
-   padding: 10px 0 15px 0;
-   font-size: 26px;
+    color:black;
+    background-color: #EBEBD3;
+    padding: 10px 0 15px 0;
+    font-size: 26px;
 }
 
 .question-text {
@@ -130,7 +123,7 @@ table tr:nth-child(even) {
 }
 
 .score {
-    /*font-family: "Courier New", Courier, monospace;*/
+    color: #ffc800;
     font-size: 30px;
     font-weight: bold;
     float:right;
@@ -149,6 +142,7 @@ table tr:nth-child(even) {
     color: #EBEBD3;
     width: 80px;
     padding: 10px;
+    margin: 10px;
     font-family: 'gooddogregular';
     font-size: 30px;
     border-radius: 20px;
@@ -158,6 +152,7 @@ table tr:nth-child(even) {
 
 .btn:hover {
     background-color: #052F5F;
+    color: #ffc800;
 }
 
 /* Better default colors */
@@ -168,6 +163,6 @@ table tr:nth-child(even) {
 /* Remove up/down spinner for number input field */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+    -webkit-appearance: none; 
+    margin: 0; 
 }

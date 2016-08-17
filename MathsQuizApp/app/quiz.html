@@ -12,7 +12,7 @@
                 <div>
                     <p/>
                     <span><b>{{ vm.currentQuestion.operand1}} {{ vm.currentQuestion.operator}} {{ vm.currentQuestion.operand2 }} = </b></span>
-                    <input name="inputAnswer" type="number" class="question-response" pattern="[0-9]*" ng-model="vm.currentQuestion.response" ng-readonly="vm.currentQuestion.result" placeholder="?" required>
+                    <input name="inputAnswer" type="number" class="question-response" pattern="[0-9]*" ng-model="vm.currentQuestion.response" ng-readonly="vm.currentQuestion.result" placeholder="?" required autocomplete="off" autocapitalize="words">
                 </div>
                 <button id="btnSubmit" type="submit" class="btn" ng-disabled="(!responseform.inputAnswer.$valid) || vm.currentQuestion.result" ng-click="vm.submitAnswer()">OK</button>
             </form>

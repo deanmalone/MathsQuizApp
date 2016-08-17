@@ -10,9 +10,12 @@
     function QuizController(QuizService, $timeout, $state) {
         var vm = this;
 
-
-
         var questionIndex = 0;
+
+        if (!QuizService.quizRunning) {
+            $state.go('start');
+        }
+
         vm.currentQuestion = QuizService.questions[questionIndex];
         vm.quizFinished = false;
         vm.score = QuizService.score;
@@ -33,8 +36,7 @@
             vm.quizFinished = true;
 
             QuizService.finishQuiz(vm.score);
-            // check if score is high score?
-           // QuizService.submitScore("Ruby", vm.score);
+
             $state.go('results');
         }
 
