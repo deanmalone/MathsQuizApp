@@ -18,115 +18,71 @@ html, body {
 
 body {
     font-family: 'gooddogregular';
-    font-size: 20px;
+    font-size: 30px;
     background-image: radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
     background-image: -webkit-radial-gradient(center center, ellipse cover, #ffeda3, #ffc800);
     position: relative;
 }
 
-header {
-    text-align:center;
+h1 {
+    font-size: 60px;
 }
 
-footer {
-	position:absolute;
-	bottom:0;
-	left:0;
+/* Remove up/down spinner for number input field */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
 }
 
-input, label {
-    font-family: 'gooddogregular';
-    font-size: 30px;
-    width:100px;
-    margin:10px;
-}
-
-hr {
-    border: 0;
-    border-top: 1px solid #8c8c8c;
-    border-bottom: 1px solid #fff;
-}
-
-table, th , td  {
-    border: 1px solid grey;
-    border-collapse: collapse;
-    padding: 5px;
-}
-table tr:nth-child(odd) {
-    background-color: #f1f1f1;
-}
-table tr:nth-child(even) {
-    background-color: #ffffff;
-}
-
-.content {
-    width:100%; 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.container {
-    text-align: center;
-}
-
-.menu-item {
-    display: inline-block;
-    padding: 15px;
-    width: 220px;
-    margin: 10px;
-    border-radius: 20px;
-}
-
-.menu-item:hover {
-    background-color: #1446A0;
-}
+a:hover{text-decoration: none !important}
+a{text-decoration: none !important}
 
 .panel {
-    width: 350px;
-	padding: 10px;
-	margin: 20px auto;
-    background-color: #1446A0;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-	-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
 }
 
-.panel-header {
-    color: #EBEBD3;
-    margin:0px 10px 10px 10px;
-    font-size: 30px;
-    text-align: left;
-}
-
-.panel-body {
-    background-color: #EBEBD3;
-    padding:10px;
-    margin:0;
+.panel-heading {
+    border-radius: 25px 25px 0px 0px;
+    font-size: 36px;
 }
 
 .panel-footer {
-    color:black;
-    background-color: #EBEBD3;
-    padding: 10px 0 15px 0;
-    font-size: 26px;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.panel-body button,.panel-body input, .panel-body label{
+    margin: 20px;
+}
+
+.btn {
+    border-radius: 25px;
+    font-size: 30px;
+    color: #EBEBD3;
+    min-width: 80px;
+}
+
+.btn:hover {
+    color: #ffc800;
+}
+
+.btn-menu {
+    font-size: 60px;
+    text-shadow: 3px 3px #052f5f;
+    margin:20px;
+}
+
+.score {
+    color: #ffc800;
+    font-size: 40px;
+    font-weight: bold;
+    float: right;
 }
 
 .question-text {
     font-family: "Courier New", Courier, monospace;
     font-size: 30px;
     font-weight: bold;
-}
-
-.score {
-    color: #ffc800;
-    font-size: 30px;
-    font-weight: bold;
-    float:right;
 }
 
 .question-response {
@@ -137,32 +93,7 @@ table tr:nth-child(even) {
     width: 80px;
 }
 
-.btn {
-    background-color: #1446A0;
-    color: #EBEBD3;
-    width: 80px;
-    padding: 10px;
-    margin: 10px;
-    font-family: 'gooddogregular';
-    font-size: 30px;
-    border-radius: 20px;
-    border:none;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #052F5F;
-    color: #ffc800;
-}
-
 /* Better default colors */
 .red { color: #FF4136; }
 .green { color: #2ECC40; }
 .blue { color: #0074D9; }
-
-/* Remove up/down spinner for number input field */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none; 
-    margin: 0; 
-}

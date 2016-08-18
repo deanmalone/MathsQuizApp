@@ -1,7 +1,8 @@
-﻿<div class="container">
+﻿<div class="text-center">
 
-    <h2>High Scores</h2>
-    <table align="center">
+    <h1 class="text-primary">High Scores</h1>
+
+    <table class="table" align="center">
         <tr>
             <th>Score</th>
             <th>Name</th>
@@ -13,6 +14,7 @@
             <td>{{ item.date | date:'medium' }}</td>
         </tr>
     </table>
-    <button id="btnOK" class="btn" ui-sref="main">OK</button>
+
+    <button id="btnOK" class="btn btn-primary" ui-sref="main">OK</button>
 
 </div>

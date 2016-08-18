@@ -1,27 +1,23 @@
-﻿<div class="container">
+﻿<div class="panel panel-primary">
 
-    <div class="panel" >
+    <div class="panel-heading">
+        <span>Question {{ vm.currentQuestion.questionNo }}</span>
+        <span class="score">{{ vm.score }}</span>
+    </div>
 
-        <div class="panel-header">
-            <span>Question {{ vm.currentQuestion.questionNo }}</span>
-            <span class="score">{{ vm.score }}</span>
-        </div>
-
-        <div class="panel-body question-text">
+    <div class="panel-body text-center">
             <form name="responseform">
                 <div>
-                    <p/>
-                    <span><b>{{ vm.currentQuestion.operand1}} {{ vm.currentQuestion.operator}} {{ vm.currentQuestion.operand2 }} = </b></span>
+                    <span class="question-text"><b>{{ vm.currentQuestion.operand1}} {{ vm.currentQuestion.operator}} {{ vm.currentQuestion.operand2 }} = </b></span>
                     <input name="inputAnswer" type="number" class="question-response" pattern="[0-9]*" ng-model="vm.currentQuestion.response" ng-readonly="vm.currentQuestion.result" placeholder="?" required autocomplete="off" autocapitalize="words">
                 </div>
-                <button id="btnSubmit" type="submit" class="btn" ng-disabled="(!responseform.inputAnswer.$valid) || vm.currentQuestion.result" ng-click="vm.submitAnswer()">OK</button>
+                <button id="btnSubmit" type="submit" class="btn btn-primary" ng-disabled="(!responseform.inputAnswer.$valid) || vm.currentQuestion.result" ng-click="vm.submitAnswer()">OK</button>
             </form>
-        </div>
-
-        <div class="panel-footer" ng-class="{'red': (vm.currentQuestion.result === 0), 'green': (vm.currentQuestion.result === 1)}">
-            <span class="fa" ng-class="{'fa-close': (vm.currentQuestion.result === 0), 'fa-check': (vm.currentQuestion.result === 1)}"></span>
-            <span >{{ vm.currentQuestion.message }}</span>
-        </div>
-
     </div>
+
+    <div class="panel-footer text-center" ng-class="{'red': (vm.currentQuestion.result === 0), 'green': (vm.currentQuestion.result === 1)}">
+        <span class="fa" ng-class="{'fa-close': (vm.currentQuestion.result === 0), 'fa-check': (vm.currentQuestion.result === 1)}"></span>
+        <span>{{ vm.currentQuestion.message }}</span>
+    </div>
+
 </div>

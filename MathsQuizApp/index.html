@@ -5,23 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Maths Quiz App</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/font-awesome.min.css"/>
     <link rel="stylesheet" href="css/app.css" />
 </head>
 <body ng-controller="AppController as vm">
 
     <header>
-        <a ui-sref="main"><img src="images/mathsquiz.png" /></a>
+        <a href="#"><span class="fa fa-info-circle fa-x pull-right" style="margin:10px;"></span></a>
+        <a ui-sref="main"><img class="center-block" src="images/mathsquiz.png" /></a>
+        
     </header>
 
-    <div ui-view class="content"></div>
+    <div ui-view class="container"></div>
 
     <footer>
-        <a href="#"><span class="fa fa-info-circle fa-2x" style="margin:10px;"></span></a>
+        <div class="navbar navbar-fixed-bottom">
+            
+           
+        </div>
     </footer>
 
     <script src="Scripts/angular.min.js"></script>
     <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="app/app.module.js"></script>
     <script src="app/app.config.js"></script>
     <script src="app/app.controller.js"></script>

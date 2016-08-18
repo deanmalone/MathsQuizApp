@@ -74,6 +74,7 @@
     <Content Include="app\start.controller.js" />
     <Content Include="app\start.html" />
     <Content Include="css\app.css" />
+    <Content Include="css\bootstrap.min.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -84,6 +85,7 @@
     <Content Include="packages.config" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.min.map" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
