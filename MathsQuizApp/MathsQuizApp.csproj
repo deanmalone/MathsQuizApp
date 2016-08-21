@@ -79,9 +79,7 @@
     <Content Include="css\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\GoodDog-webfont.svg" />
-    <Content Include="images\highscores.png" />
     <Content Include="images\mathsquiz.png" />
-    <Content Include="images\startquiz.png" />
     <Content Include="packages.config" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
