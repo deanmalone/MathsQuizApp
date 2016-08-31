@@ -38,27 +38,23 @@
         // generate new quiz
         service.newQuiz = function(options) {
 
-            // initialise quiz;
-            service.score = 0;
-            service.questions = null;
-            service.quizRunning = true;
+            var deferred = $q.defer();
 
-            service.questions = new Array(options.numberOfQuestions);
-            for (var i = 0; i < options.numberOfQuestions; i++) {
+            $http({
+                method: 'POST',
+                url: API_ENDPOINT,
+                data: options,
+            }).then(function onSuccess(response) {
+                service.score = 0;
+                service.questions = null;
+                service.quizRunning = true;
+                service.questions = response.data; // array of questions
+                deferred.resolve();
+            }, function onError(response) {
+                deferred.reject(error);
+            });
 
-                // generate random equation
-                var op1 = getRandomInt(1, 20);
-                var op2 = getRandomInt(1, 20);
-                var result = op1 + op2;
-
-                service.questions[i] = {
-                    questionNo: i + 1,
-                    operand1: op1,
-                    operand2: op2,
-                    operator: '+',
-                    answer: result
-                };
-            }
+            return deferred.promise;
         }
 
         service.getHighScores = function () {

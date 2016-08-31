@@ -16,10 +16,11 @@
 
         function beginQuiz() {
             // create a new quiz
-            QuizService.newQuiz({ numberOfQuestions: vm.numberOfQuestions });
-
-            // Begin quiz
-            $state.go('quiz');
+            QuizService.newQuiz({ NumberOfQuestions: vm.numberOfQuestions })
+                .then(function () {
+                    // Begin quiz
+                    $state.go('quiz')
+                });
         };
 
         vm.startQuiz = function()
