@@ -31,9 +31,9 @@
             // set the current user
             QuizService.currentUser = vm.username;
 
-            vm.message = "Ready?";
+            vm.message = "Are you ready?";
 
-            $timeout(beginQuiz, 2000);
+            $timeout(beginQuiz, 1500);
         }
 
     }

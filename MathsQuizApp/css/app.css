@@ -28,11 +28,6 @@ h1 {
     font-size: 60px;
 }
 
-/*table {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 20px;
-}*/
-
 /* Remove up/down spinner for number input field */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -103,8 +98,6 @@ a{text-decoration: none !important}
 .green { color: #2ECC40; }
 .blue { color: #0074D9; }
 
-
-.test{
-     font-family: 'gooddogregular';
-     font-size: 30px;
+#username {
+    width: 200px;
 }

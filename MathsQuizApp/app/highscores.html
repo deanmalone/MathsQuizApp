@@ -12,11 +12,11 @@
             </tr>
         </thead> 
         <tbody>
-            <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:10">
+            <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:20">
                 <td>{{ item.score }}</td>
                 <td>{{ item.name }}</td>
                 <td>{{ item.level }}</td>
-                <td class="small">{{ item.date | date:'short' }}</td>
+                <td class="small">{{ item.date | date:'d/M/yy h:mm a' }}</td>
             </tr>
         </tbody>
     </table>

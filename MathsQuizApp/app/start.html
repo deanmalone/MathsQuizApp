@@ -9,13 +9,17 @@
             <form id="startquizform">
                 <div class="form-group">
                     <label for="name">Your name:</label>
-                    <input type="text" name="name" ng-model="vm.username" placeholder="?" required>
-                    <label for="level">Level:</label>
+                    <input id="username" type="text" name="name" ng-model="vm.username" placeholder="?" required>
+                </div>
+                <div class="form-group">
+                    <label class="small" for="level">Level:</label>
                     <select name="level" ng-model="vm.level" ng-options="x for x in vm.levelOptions"></select>
-                    <label for="questions">Number of questions:</label>
+                    <label class="small" for="questions">Number of questions:</label>
                     <select name="questions" ng-model="vm.numberOfQuestions" ng-options="x for x in vm.questionOptions"></select>
                 </div>
-                <button id="btnOK" type="submit" class="btn btn-primary" ng-click="vm.startQuiz()">Start</button>
+                <div class="form-group">
+                    <button id="btnOK" type="submit" class="btn btn-primary" ng-click="vm.startQuiz()">Start</button>
+                </div>
             </form>
         </div>
 
