@@ -11,7 +11,7 @@ namespace MathsQuizApp.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "MathsQuizApp.Data.QuizContext";
         }
 

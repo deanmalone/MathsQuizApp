@@ -176,6 +176,11 @@
     <Compile Include="Models\Settings.cs" />
     <Compile Include="Api\ScoresController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AdditionQuestionGenerator.cs" />
+    <Compile Include="Services\DivisionQuestionGenerator.cs" />
+    <Compile Include="Services\MultiplicationQuestionGenerator.cs" />
+    <Compile Include="Services\IQuestionGenerator.cs" />
+    <Compile Include="Services\SubtractionQuestionGenerator.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="WebApiConfig.cs" />
   </ItemGroup>

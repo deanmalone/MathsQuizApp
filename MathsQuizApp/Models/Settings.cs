@@ -8,5 +8,6 @@ namespace MathsQuizApp.Models
     public class Settings
     {
         public int NumberOfQuestions { get; set; }
+        public int Level { get; set; }
     }
 }

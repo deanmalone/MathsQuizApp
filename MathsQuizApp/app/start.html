@@ -10,6 +10,8 @@
                 <div class="form-group">
                     <label for="name">Your name:</label>
                     <input type="text" name="name" ng-model="vm.username" placeholder="?" required>
+                    <label for="level">Level:</label>
+                    <select name="level" ng-model="vm.level" ng-options="x for x in vm.levelOptions"></select>
                 </div>
                 <button id="btnOK" type="submit" class="btn btn-primary" ng-click="vm.startQuiz()">Start</button>
             </form>

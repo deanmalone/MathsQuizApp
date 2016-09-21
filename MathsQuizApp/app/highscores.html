@@ -1,4 +1,4 @@
-﻿<div class="col-sm-6 col-sm-offset-3 text-center" >
+﻿<div class="col-sm-10 col-sm-offset-1 text-center" >
     
     <h1 class="text-primary">High Scores</h1>
 
@@ -7,6 +7,7 @@
             <tr >
                 <th class="text-right">Score</th>
                 <th class="text-right">Name</th>
+                <th class="text-right">Level</th>
                 <th class="text-right">Date</th>
             </tr>
         </thead> 
@@ -14,7 +15,8 @@
             <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:10">
                 <td>{{ item.score }}</td>
                 <td>{{ item.name }}</td>
-                <td class="small">{{ item.date | date:'medium' }}</td>
+                <td>{{ item.level }}</td>
+                <td class="small">{{ item.date | date:'short' }}</td>
             </tr>
         </tbody>
     </table>

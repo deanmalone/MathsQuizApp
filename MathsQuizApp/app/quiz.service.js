@@ -18,6 +18,8 @@
 
         service.quizRunning = false;
         service.currentUser = null;
+        service.level = null;
+        service.numberOfQuestions = null;
         service.questions = null;
         service.score = 0;
 
@@ -25,6 +27,9 @@
         service.newQuiz = function(options) {
 
             var deferred = $q.defer();
+
+            service.level = options.Level;
+            service.numberOfQuestions = options.NumberOfQuestions;
 
             $http({
                 method: 'POST',
@@ -62,7 +67,7 @@
 
         service.finishQuiz = function(score) {
 
-            var newScore = { score: score, name: service.currentUser, date: new Date() };
+            var newScore = { score: score, name: service.currentUser, date: new Date(), level: service.level };
             var deferred = $q.defer();
            
             $http({

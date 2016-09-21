@@ -1,4 +1,5 @@
 ﻿using MathsQuizApp.Models;
+using MathsQuizApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,21 +20,21 @@ namespace MathsQuizApp.Api
             Random random = new Random();
 
             var numberOfQuestions = (settings != null) ? settings.NumberOfQuestions : 10;
+            var level = (settings != null) ? settings.Level : 1;
+
+            List<IQuestionGenerator> questionGenerators = new List<IQuestionGenerator>();
+            questionGenerators.Add(new AdditionQuestionGenerator());
+            questionGenerators.Add(new SubtractionQuestionGenerator());
+            questionGenerators.Add(new MultiplicationQuestionGenerator());
+            questionGenerators.Add(new DivisionQuestionGenerator());
 
             for (var i = 0; i < numberOfQuestions; i++)
             {
-                // generate random equation
-                var op1 = random.Next(1, 20);
-                var op2 = random.Next(1, 20);
-                var result = op1 + op2;
+                var maxIndex = (level > 4) ? 4 : level;
+                var selectedGenerator = random.Next(0, maxIndex); //Generates int that is greater than or equal to 0 and less than maxIndex; 
 
-                Question newQuestion = new Question();
+                Question newQuestion = questionGenerators[selectedGenerator].GenerateQuestion(level);
                 newQuestion.questionNo = i + 1;
-                newQuestion.operand1 = op1;
-                newQuestion.operand2 = op2;
-                newQuestion.@operator = "+";
-                newQuestion.answer = result;
-
                 questions.Add(newQuestion);
             }
 

@@ -14,9 +14,11 @@
         vm.level = 1;
         vm.numberOfQuestions = 10;
 
+        vm.levelOptions = [ 1, 2, 3, 4, 5];    
+
         function beginQuiz() {
             // create a new quiz
-            QuizService.newQuiz({ NumberOfQuestions: vm.numberOfQuestions })
+            QuizService.newQuiz({ NumberOfQuestions: vm.numberOfQuestions, Level: vm.level })
                 .then(function () {
                     // Begin quiz
                     $state.go('quiz')
