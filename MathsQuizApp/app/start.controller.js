@@ -15,6 +15,7 @@
         vm.numberOfQuestions = 10;
 
         vm.levelOptions = [ 1, 2, 3, 4, 5];    
+        vm.questionOptions = [5, 10, 15, 20, 25];
 
         function beginQuiz() {
             // create a new quiz
