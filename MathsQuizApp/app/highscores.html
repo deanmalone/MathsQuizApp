@@ -1,20 +1,24 @@
-﻿<div class="text-center">
-
+﻿<div class="col-sm-6 col-sm-offset-3 text-center" >
+    
     <h1 class="text-primary">High Scores</h1>
 
-    <table class="table" align="center">
-        <tr>
-            <th>Score</th>
-            <th>Name</th>
-            <th>Date</th>
-        </tr>
-        <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:10">
-            <td>{{ item.score }}</td>
-            <td>{{ item.name }}</td>
-            <td>{{ item.date | date:'medium' }}</td>
-        </tr>
+    <table class="table table-condensed text-right">
+        <thead class="bg-primary">
+            <tr >
+                <th class="text-right">Score</th>
+                <th class="text-right">Name</th>
+                <th class="text-right">Date</th>
+            </tr>
+        </thead> 
+        <tbody>
+            <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:10">
+                <td>{{ item.score }}</td>
+                <td>{{ item.name }}</td>
+                <td class="small">{{ item.date | date:'medium' }}</td>
+            </tr>
+        </tbody>
     </table>
 
-    <button id="btnOK" class="btn btn-primary" ui-sref="main">OK</button>
+    <button id="btnOK" class="btn btn-primary" ui-sref="main">Back</button>
 
 </div>

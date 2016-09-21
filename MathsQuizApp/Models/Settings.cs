@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace MathsQuizApp.Api
+namespace MathsQuizApp.Models
 {
-    public class QuizSettings
+    public class Settings
     {
         public int NumberOfQuestions { get; set; }
     }

@@ -10,7 +10,8 @@
     function HighScoresController(QuizService, $timeout) {
         var vm = this;
 
-        vm.highScores = QuizService.getHighScores();
+        QuizService.getHighScores()
+            .then(function (data) { vm.highScores = data; });
 
     }
 

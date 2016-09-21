@@ -12,9 +12,6 @@
 
         vm.questions = QuizService.questions;
         vm.score = QuizService.score;
-
-        //check if score makes the top ten
-       // QuizService.submitScore("Ruby", QuizService.score);
      
     }
 

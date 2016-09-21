@@ -3,7 +3,7 @@
 
     angular
         .module('app')
-        .constant('API_ENDPOINT', window.location.protocol + '//' + window.location.host + '/api/quiz')
+        .constant('API_ENDPOINT', window.location.protocol + '//' + window.location.host + '/api')
         .config(configure);
 
     configure.$inject = ['$stateProvider', '$urlRouterProvider'];

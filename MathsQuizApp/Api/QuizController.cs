@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MathsQuizApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -11,9 +12,9 @@ namespace MathsQuizApp.Api
     {
         // POST api/<controller>
         [HttpPost]
-        public IEnumerable<QuizQuestion> GetQuiz([FromBody]QuizSettings settings)
+        public IEnumerable<Question> GetQuiz([FromBody]Settings settings)
         {
-            List<QuizQuestion> questions = new List<QuizQuestion>();
+            List<Question> questions = new List<Question>();
 
             Random random = new Random();
 
@@ -26,7 +27,7 @@ namespace MathsQuizApp.Api
                 var op2 = random.Next(1, 20);
                 var result = op1 + op2;
 
-                QuizQuestion newQuestion = new QuizQuestion();
+                Question newQuestion = new Question();
                 newQuestion.questionNo = i + 1;
                 newQuestion.operand1 = op1;
                 newQuestion.operand2 = op2;

@@ -1,25 +1,29 @@
-﻿<div class="text-center">
+﻿<div class="col-sm-6 col-sm-offset-3 text-center">
 
-    <h2>Quiz Results</h2>
+    <h1 class="text-primary">Quiz Results</h1>
 
-    <table align="center">
-        <tr>
-            <th colspan="2" style="text-align:left">Question</th>
-            <th>Response</th>
-            <th>Answer</th>
-            <th>Result</th>
-        </tr>
-        <tr ng-repeat="item in vm.questions | orderBy : 'questionNo'">
-            <td>{{ item.questionNo }}.</td>
-            <td style="text-align:right">{{ item.operand1 }} {{ item.operator }} {{ item.operand2 }} = </td>
-            <td>{{ item.response}}</td>
-            <td>{{ item.answer}}</td>
-            <td><span class="fa" ng-class="{'fa-close': (item.result === 0), 'fa-check': (item.result === 1)}"></span></td>
-        </tr>
-        <tr>
-            <td colspan="4" style="text-align:right">Score</td>
-            <td>{{ vm.score }}</td>
-        </tr>
+    <table class="table table-condensed text-right">
+        <thead class="bg-primary">
+            <tr>
+                <th colspan="2" class="text-right">Question</th>
+                <th class="text-right">Response</th>
+                <th class="text-right">Answer</th>
+                <th class="text-right">Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in vm.questions | orderBy : 'questionNo'">
+                <td>{{ item.questionNo }}.</td>
+                <td style="text-align:right">{{ item.operand1 }} {{ item.operator }} {{ item.operand2 }} = </td>
+                <td>{{ item.response}}</td>
+                <td>{{ item.answer}}</td>
+                <td class="small"><span class="fa" ng-class="{'fa-close': (item.result === 0), 'fa-check': (item.result === 1)}"></span></td>
+            </tr>
+            <tr class="text-primary">
+                <td colspan="4" class="text-right">Score</td>
+                <td>{{ vm.score }}</td>
+            </tr>
+        </tbody>
     </table>
 
     <button id="btnOK" class="btn btn-primary" ui-sref="highscores">OK</button>

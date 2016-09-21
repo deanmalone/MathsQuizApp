@@ -164,15 +164,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Api\QuizQuestion.cs" />
+    <Compile Include="Data\QuizContext.cs" />
+    <Compile Include="Migrations\201609020346593_InitialCreate.cs" />
+    <Compile Include="Migrations\201609020346593_InitialCreate.Designer.cs">
+      <DependentUpon>201609020346593_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Question.cs" />
     <Compile Include="Api\QuizController.cs" />
-    <Compile Include="Api\QuizSettings.cs" />
+    <Compile Include="Models\Score.cs" />
+    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Api\ScoresController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="WebApiConfig.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Server\" />
+    <EmbeddedResource Include="Migrations\201609020346593_InitialCreate.resx">
+      <DependentUpon>201609020346593_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

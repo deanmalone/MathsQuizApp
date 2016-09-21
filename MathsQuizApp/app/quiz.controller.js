@@ -35,9 +35,12 @@
         function endQuiz() {
             vm.quizFinished = true;
 
-            QuizService.finishQuiz(vm.score);
+            QuizService.finishQuiz(vm.score)
+                .then(function () {
+                    $state.go('results')
+                });
 
-            $state.go('results');
+
         }
 
         vm.submitAnswer = function () {

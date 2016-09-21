@@ -1,23 +1,24 @@
-﻿<div class="panel panel-primary">
+﻿<div class="col-sm-6 col-sm-offset-3">
+    <div class="panel panel-primary">
 
-    <div class="panel-heading">
-        <span>Let's begin...</span>
-        <span class="score">{{ vm.score }}</span>
+        <div class="panel-heading">
+            <span>Let's begin...</span>
+        </div>
+
+        <div class="panel-body text-center">
+            <form id="startquizform">
+                <div class="form-group">
+                    <label for="name">Your name:</label>
+                    <input type="text" name="name" ng-model="vm.username" placeholder="?" required>
+                </div>
+                <button id="btnOK" type="submit" class="btn btn-primary" ng-click="vm.startQuiz()">Start</button>
+            </form>
+        </div>
+
+        <div class="panel-footer text-center">
+            <span class="fa"></span>
+            <span>{{ vm.message }}</span>
+        </div>
+
     </div>
-
-    <div class="panel-body text-center">
-        <form id="startquizform">
-            <div>
-                <label for="name">Your name:</label>
-                <input type="text" name="name" ng-model="vm.username" placeholder="?" required>
-            </div>
-            <button id="btnOK" type="submit" class="btn btn-primary" ng-click="vm.startQuiz()">Start</button>
-        </form>
-    </div>
-
-    <div class="panel-footer text-center">
-        <span class="fa"></span>
-        <span>{{ vm.message }}</span>
-    </div>
-
 </div>
