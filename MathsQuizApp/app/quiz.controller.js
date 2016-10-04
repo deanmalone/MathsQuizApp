@@ -35,11 +35,10 @@
         function endQuiz() {
             vm.quizFinished = true;
 
-            QuizService.finishQuiz(vm.score)
+            QuizService.finishQuiz()
                 .then(function () {
                     $state.go('results')
                 });
-
 
         }
 
@@ -48,8 +47,8 @@
             if (!vm.currentQuestion.result) {
 
                 if (vm.currentQuestion.response == vm.currentQuestion.answer) {
-                    QuizService.score = QuizService.score + 10;
-                    vm.score = QuizService.score;
+                    // Correct answser, so update score accordingly
+                    vm.score = QuizService.updateScore();
                     vm.currentQuestion.result = 1;
                     vm.currentQuestion.message = "Well done!";
                 } else {

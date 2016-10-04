@@ -22,6 +22,7 @@
         service.numberOfQuestions = null;
         service.questions = null;
         service.score = 0;
+        service.scorePerQuestion = 0;
 
         // generate new quiz
         service.newQuiz = function(options) {
@@ -37,6 +38,7 @@
                 data: options,
             }).then(function onSuccess(response) {
                 service.score = 0;
+                service.scorePerQuestion = 100 / service.numberOfQuestions;
                 service.questions = null;
                 service.quizRunning = true;
                 service.questions = response.data; // array of questions
@@ -65,9 +67,16 @@
 
         }
 
-        service.finishQuiz = function(score) {
+        service.updateScore = function () {
+            service.score = service.score + service.scorePerQuestion;
+            return service.score;
+        }
 
-            var newScore = { score: score, name: service.currentUser, date: new Date(), level: service.level };
+        service.finishQuiz = function() {
+
+            service.score = Math.round(service.score);
+
+            var newScore = { score: service.score, name: service.currentUser, date: new Date(), level: service.level };
             var deferred = $q.defer();
            
             $http({

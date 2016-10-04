@@ -3,7 +3,7 @@
 
         <div class="panel-heading">
             <span>Question {{ vm.currentQuestion.questionNo }}</span>
-            <span class="score">{{ vm.score }}</span>
+            <span class="score">{{ vm.score | number:0 }}</span>
         </div>
 
         <div class="panel-body text-center">
