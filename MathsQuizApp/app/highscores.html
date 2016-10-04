@@ -4,17 +4,17 @@
 
     <table class="table table-condensed text-right">
         <thead class="bg-primary">
-            <tr >
-                <th class="text-right">Score</th>
+            <tr>
                 <th class="text-right">Name</th>
+                <th class="text-right">Score</th>
                 <th class="text-right">Level</th>
                 <th class="text-right">Date</th>
             </tr>
         </thead> 
         <tbody>
             <tr ng-repeat="item in vm.highScores | orderBy : ['-score','-date'] | limitTo:20">
-                <td>{{ item.score }}</td>
                 <td>{{ item.name }}</td>
+                <td>{{ item.score }}</td>
                 <td>{{ item.level }}</td>
                 <td class="small">{{ item.date | date:'d/M/yy h:mm a' }}</td>
             </tr>
